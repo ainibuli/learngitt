@@ -1,0 +1,30 @@
+<script type="text/javascript" src="/wwwroot/player/ckplayer/ckplayer.js" charset="utf-8">    </script>
+<script type="text/javascript">
+	var flashvars={
+		f:'/wwwroot/player/ckplayer/m3u8.swf',
+		a:'[vod:playurlpath]',
+		i:'',
+	    c:'0',
+		s:'4',
+		lv:'0',
+		d:'{maccms:path_tpl}/images/ggao-2.png',
+		u:'http://www.weinasi5566.com',
+		};
+	var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+	CKobject.embedSWF('/wwwroot/player/ckplayer/ckplayer.swf','a1','ckplayer_a1','650','450',flashvars,params);
+	/*
+	CKobject.embedSWF(播放器路径,容器id,播放器id/name,播放器宽,播放器高,flashvars的值,其它定义也可省略);
+	下面三行是调用html5播放器用到的
+	*/
+	var video=['[vod:playurlpath]->video/mp4','[vod:playurlpath]->video/webm','[vod:playurlpath]->video/ogg'];
+	var support=['iPad','iPhone','ios','android+false','msie10+false'];
+	CKobject.embedHTML5('a1','ckplayer_a1','500','500',video,flashvars,support);
+	
+	
+	function closelights(){//关灯
+		alert(' 本演示不支持开关灯');
+	}
+	function openlights(){//开灯s
+		alert(' 本演示不支持开关灯');
+	}
+  </script>
